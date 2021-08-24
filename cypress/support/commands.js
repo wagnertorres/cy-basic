@@ -26,7 +26,7 @@
 
 Cypress.Commands.add("preencherCamposObrigatorios", valor => {
     cy.get("#first-name").type(valor.nome);
-    cy.get("#last-name").type(valor.sobreNome);
+    cy.get("#last-name").type(valor.sobrenome);
     cy.get("#email").type(valor.email);
     cy.get("#agree").click();
 })

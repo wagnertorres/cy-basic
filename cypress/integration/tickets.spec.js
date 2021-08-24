@@ -6,13 +6,13 @@ describe("Tickets", () => {
 
     it("Preencher todos os campos de texto", () => {
         const nome = "Wagner";
-        const sobreNome = "Torres";
+        const sobrenome = "Torres";
 
         cy.get("#first-name").type(nome);
-        cy.get("#last-name").type(sobreNome);
+        cy.get("#last-name").type(sobrenome);
         cy.get("#email").type("teste@email.com");
         cy.get("#requests").type("Vegan");
-        cy.get("#signature").type(`${nome} ${sobreNome}`);
+        cy.get("#signature").type(`${nome} ${sobrenome}`);
     });
 
     it("Selecionar dois tickets", () => {
@@ -54,11 +54,11 @@ describe("Tickets", () => {
 
     it("Preencher o formulário e resetar tudo", () => {
         const nome = "Wagner";
-        const sobreNome = "Torres";
-        const nomeCompleto = `${nome} ${sobreNome}`;
+        const sobrenome = "Torres";
+        const nomeCompleto = `${nome} ${sobrenome}`;
 
         cy.get("#first-name").type(nome);
-        cy.get("#last-name").type(sobreNome);
+        cy.get("#last-name").type(sobrenome);
         cy.get("#email").type("teste@email.com");
         cy.get("#ticket-quantity").select("2");
         cy.get("#vip").check();
@@ -82,7 +82,7 @@ describe("Tickets", () => {
     it("Preencher apenas os campos obrigatórios do formulário usando comandos customizados do Cypress", () => {
         const cliente = {
             nome: "Wagner",
-            sobreNome: "Torres",
+            sobrenome: "Torres",
             email: "wt@email.com.br"
         };
         cy.preencherCamposObrigatorios(cliente);
