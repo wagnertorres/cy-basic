@@ -1,0 +1,10 @@
+image: 'cypress/base'
+
+stages:
+  - e2e
+
+job-end-to-end testing:
+  stage: e2e
+  script:
+    - npm install
+    - npm test
